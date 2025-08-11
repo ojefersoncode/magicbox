@@ -1,0 +1,40 @@
+"use client";
+import React from "react";
+import Link from "next/link";
+import { HomeIcon, Rocket, BanknoteArrowDown, History } from "lucide-react";
+
+const DATA = {
+  navbar: [
+    { href: "#", icon: HomeIcon, label: "Home" },
+    { href: "#", icon: Rocket, label: "Atualizador" },
+    { href: "#", icon: BanknoteArrowDown, label: "Saque" },
+    { href: "#", icon: History, label: "Histórico" },
+  ],
+};
+
+export function Navbottom() {
+  return (
+    <nav className="fixed bottom-0 left-0 w-full bg-blue-950 border-t border-blue-500">
+      <div className="flex justify-center gap-4 items-center py-2">
+        {DATA.navbar.map((item, index) => {
+          const isHome = item.label === "Home";
+          const base = isHome ? "text-white" : "text-blue-400/50";
+          const hover = isHome
+            ? ""
+            : "group-hover:text-white trasition-all duration-300";
+
+          return (
+            <Link key={index} href={item.href} className="p-4 group">
+              <div className="flex flex-col justify-center items-center gap-1">
+                <item.icon className={`h-5 w-5 ${base} ${hover}`} />
+                <span className={`text-sm font-bold ${base} ${hover}`}>
+                  {item.label}
+                </span>
+              </div>
+            </Link>
+          );
+        })}
+      </div>
+    </nav>
+  );
+}
