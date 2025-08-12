@@ -8,9 +8,9 @@ export default function Navbar() {
   return (
     <div className="w-full flex justify-between items-center px-4 max-md:py-4 rounded-md border border-blue-500">
       <div className="flex items-center gap-0;5">
-        <h1 className="text-xl max-md:text-lg font-black">Magic</h1>
+        <h1 className="text-xl text-white max-md:text-lg font-black">Magic</h1>
         <Box className="size-7 max-md:size-6 text-blue-400" />
-        <h1 className="text-xl font-black">box</h1>
+        <h1 className="text-xl text-white font-black">box</h1>
       </div>
 
       <Card className="bg-transparent border-none text-white max-md:hidden">

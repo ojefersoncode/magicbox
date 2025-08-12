@@ -7,15 +7,15 @@ const DATA = {
   navbar: [
     { href: "#", icon: HomeIcon, label: "Home" },
     { href: "#", icon: Rocket, label: "Atualizador" },
-    { href: "#", icon: BanknoteArrowDown, label: "Saque" },
     { href: "#", icon: History, label: "Histórico" },
+    { href: "#", icon: BanknoteArrowDown, label: "Saque" },
   ],
 };
 
 export function Navbottom() {
   return (
-    <nav className="fixed bottom-0 left-0 w-full bg-blue-950 border-t border-blue-500">
-      <div className="flex justify-center gap-4 items-center py-2">
+    <nav className="fixed bottom-0 z-20 left-0 w-full bg-blue-950 border-t border-blue-500">
+      <div className="flex justify-center gap-4 items-center">
         {DATA.navbar.map((item, index) => {
           const isHome = item.label === "Home";
           const base = isHome ? "text-white" : "text-blue-400/50";

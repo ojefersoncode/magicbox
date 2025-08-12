@@ -7,7 +7,7 @@ interface Product {
   image: string;
 }
 
-export default function Cards() {
+export default function GiftBox() {
   const products: Product[] = [
     {
       id: 1,
@@ -52,7 +52,7 @@ export default function Cards() {
       {products.map((product) => (
         <div
           key={product.id}
-          className="flex flex-col gap-4 justify-between items-center rounded-md text-white border border-blue-500 bg-transparent hover:scale-105 transition-all duration-300 z-10"
+          className="flex flex-col gap-4 justify-between items-center rounded-md text-white border border-blue-500 bg-transparent"
         >
           <h1 className="font-bold text-base max-md:text-xs text-center pt-4 pb-1">
             {product.title}
@@ -60,7 +60,7 @@ export default function Cards() {
           <img
             src={product.image}
             alt={product.title}
-            className="h-32 max-md:h-20 object-contain"
+            className="h-24 max-md:h-20 object-contain"
           />
           <div className="bg-blue-950 px-4 p-0.5 rounded-t-xl">
             <span className="font-medium text-sm max-md:text-[0.60rem]">
