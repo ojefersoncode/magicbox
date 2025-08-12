@@ -1,5 +1,9 @@
-import Spin from "@/components/Pages/Spin";
+import { Spin } from "@/components/Pages/Spin";
 
 export default function WithdrawPage() {
-  return <Spin />;
+  return (
+    <div>
+      <Spin />
+    </div>
+  );
 }
