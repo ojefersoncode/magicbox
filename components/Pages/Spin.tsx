@@ -124,7 +124,7 @@ export function Spin() {
       <div className="flex w-full justify-between items-center px-2">
         <div className="flex items-center text-nowrap text-muted hover:text-white/80">
           <ChevronLeft className="size-5 max-md:size-4" />
-          <span className="font-bold text-sm max-md:text-xs">
+          <span className="font-bold text-sm max-md:text-sm">
             Voltar pagina
           </span>
         </div>
@@ -149,7 +149,7 @@ export function Spin() {
             <div key={index} className="min-w-[150px] flex-shrink-0">
               <Card className="bg-blue-900 border-blue-500 rounded-md shadow-lg">
                 <CardContent className="flex flex-col items-center justify-center ">
-                  <div className="relative w-24 h-24 md:w-30 md:h-30">
+                  <div className="relative w-16 h-16 md:w-30 md:h-30">
                     <Image
                       src={item.img}
                       alt={item.name}
@@ -170,7 +170,7 @@ export function Spin() {
           <Button
             onClick={startSpin}
             disabled={isSpinning}
-            className="p-6 bg-blue-500 text-base font-medium"
+            className="p-6 bg-blue-500 hover:bg-blue-500 text-base font-medium"
           >
             {isSpinning ? "Girando..." : "Abrir caixa"}
           </Button>
